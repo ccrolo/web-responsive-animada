@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.borde-tablero {
+    max-width: 500px;
+    border: 2px solid #333333;
+    margin: 50px;
+    padding: 0 20px 20px 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: -15px;
+}
+
+label {
+    color: #1b1c20;
+    margin-right: 5px;
+}
+
+.bg {
+    background-color: #3c3c3f;
+}
+
+.tablero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablero div {
+    font-size: 30px;
+    min-width: 50px;
+    min-height: 50px;
+    text-align: center;
+}
+
+.tablero div:nth-child(odd) {
+    background-color: #fff;
+}
+
+.tablero div:nth-child(even) {
+    background-color: #999999;
+}
