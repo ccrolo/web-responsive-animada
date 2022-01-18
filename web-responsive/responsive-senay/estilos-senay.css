@@ -7,7 +7,7 @@
 .chessboard-container {
     width: 530px;
     height: 550px;
-    border: 2px solid #333333;
+    /* border: 2px solid #333333; */
     margin: 50px;
     /* padding: 0 20px 20px 20px; */
 }
@@ -26,34 +26,45 @@ label {
     margin-right: 5px;
 }
 
-.chess-board {
+.flip {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto;
     border: 30px solid #3c3c3f;
     margin: 0 20px;
     /* grid-template-rows: auto auto auto auto auto auto auto auto; */
+    overflow: hidden;
+    transition: 1s ease;
 }
 
-.chess-board div {
-    width: 52px;
-    height: 52px;
+.flip div {
+    width: 54px;
+    height: 54px;
     text-align: center;
     font-size: 40px;
     /* border: 1px solid black; */
 }
+
+
+/* .chess-board:hover {
+    transform: rotatey(180deg);
+}
+
+.chess-board:hover .flip {
+    transform: rotate(180deg);
+}
+
+.chess-board:hover .flip div {
+    transform: rotateX(180deg);
+} */
 
 .grey {
     background-color: #999999;
 }
 
 
-/* .chess-board div:nth-child(-n + 8):nth-child(even),
-.chess-board div:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
-.chess-board div:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
-.chess-board div:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
-.chess-board div:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
-.chess-board div:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
-.chess-board div:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
-.chess-board div:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
-    background-color: #999999;
-} */
+/*                            pruebas                  */
+
+input[type="text"]:checked~.chess-board {
+    transform: rotatey(180deg);
+    transition: all 0.3s ease;
+}
