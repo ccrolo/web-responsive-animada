@@ -4,36 +4,54 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Letra Asignada';
+    src: url(oswald-font/static/Oswald-Regular.ttf);
+}
+
+.body-container {
+    font-family: 'Letra Asignada';
+    background: url(chess-bg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #1b1c20;
+    position: relative;
+}
+
 .chessboard-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 530px;
     height: 550px;
-    /* border: 2px solid #333333; */
-    margin: 50px;
-    /* padding: 0 20px 20px 20px; */
+    z-index: 1;
 }
 
-.chess-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    margin: 10px 0 20px;
-    padding-left: 10px;
-    /* margin-left: -15px; */
-}
-
-label {
-    color: #1b1c20;
+.solo-label {
     margin-right: 5px;
+}
+
+@media screen and (min-width:480px) {
+    .solo-label {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .solo-label {
+        margin-left: initial;
+    }
 }
 
 .flip {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto;
-    border: 30px solid #3c3c3f;
-    margin: 0 20px;
-    /* grid-template-rows: auto auto auto auto auto auto auto auto; */
+    border: 30px solid #333333;
+    margin: 20px;
     overflow: hidden;
-    transition: 1s ease;
+    transition: 1s ease-out;
+    background-color: #ffffff;
 }
 
 .flip div {
@@ -41,30 +59,16 @@ label {
     height: 54px;
     text-align: center;
     font-size: 40px;
-    /* border: 1px solid black; */
 }
-
-
-/* .chess-board:hover {
-    transform: rotatey(180deg);
-}
-
-.chess-board:hover .flip {
-    transform: rotate(180deg);
-}
-
-.chess-board:hover .flip div {
-    transform: rotateX(180deg);
-} */
 
 .grey {
     background-color: #999999;
 }
 
+#rotar:checked+.flip {
+    transform: rotateX(180deg);
+}
 
-/*                            pruebas                  */
-
-input[type="text"]:checked~.chess-board {
-    transform: rotatey(180deg);
-    transition: all 0.3s ease;
+#rotar:checked+.flip div {
+    transform: rotateX(180deg);
 }
