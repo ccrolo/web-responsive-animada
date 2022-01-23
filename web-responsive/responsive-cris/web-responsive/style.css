@@ -48,6 +48,7 @@ body {
     text-align: center;
     color: #ffffff;  
     font-size: 1.3rem;
+    padding: 5%;
 }
 
 /*-------------Sección cards------------*/
@@ -339,10 +340,15 @@ body {
     .cards_title {
         margin-top: 5%;
         margin-bottom: 10%;
+        font-size: 2rem;
     }
 
 
     /*pricing*/
+
+    .price p {
+        margin-top: 30px;
+    }
 
     .pricing_card {
         width: 100%;
@@ -418,8 +424,6 @@ body {
         width: 280px;
         height: 100%;
         padding: 5%;
-
-     
     }
 
     .pricing_container {
@@ -456,8 +460,6 @@ body {
     .pricing_card:hover, .pricing_card-middle:hover {
         transform: scale(1.08);
         transition: 0.3s linear;
-        
-
     }
 
     .pricing_card-middle:hover>.most_popular {
@@ -469,10 +471,29 @@ body {
 
 /*------------Versión Desktop-XL---------------*/
 
-@media screen and (min-width: 1025px){
+/*Cards*/
 
-    .cards_wrap {
-        
+.cards_wrap{
+
+    margin: 20px;
+}
+
+.cards_wrap-middle {
+    margin: 20px;
+}
+
+/*Pricing*/
+
+@media screen and (min-width: 1440px){
+
+    .pricing_card {
+        padding: 5%;
+        margin: 0px 20px;
+    }
+
+    .pricing_card-middle{
+        padding: 5%;
+        margin: 0px 20px;
     }
 
 
