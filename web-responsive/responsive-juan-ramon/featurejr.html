@@ -10,6 +10,7 @@
     <!-- Libreria reset css-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet" type="text/css"> 
     <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="./style.css" rel="stylesheet" media="(min-widht:480px)" type="text/css">
   </head>
 
   <body>
@@ -18,109 +19,115 @@
     </header>
     <main>
       <div class="container">
-        <section class="container__section">
-          <div class="heading">
-            <h1 class="heading__titulo">Formulario de contacto</h1>
-            <h5 class="heading__subtitulo">
-              Gracias por tomarte el tiempo para contactar
-              con nosotros y ayudarnos a mejorar
-            </h5>
-          </div>
-        </section>
-
-        <div class="container__section">
-          <form class="container-formulario">
-            <div class="input-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
-            <div class="input-group">
-                <label for="emaildir">Email</label>
-                <input type="email" id="emaildir" placeholder="Introduce tu email">
-            </div>
-            <div class="input-group">
-                <label for="edad">Edad</label>
-                <input type="number" id="edad" placeholder="Introduce tu edad, debes ser mayor de edad">
-            </div>
-            <div class="input-group">
-                <label for="rol">¿Qué rol describe mejor tu situación actual?</label>
-                <select name="rol">
-                <option>Selecciona tu rol actual</option>
-                <option>Estudiante</option>
-                <option>Trabajo a tiempo completo</option>
-                <option>Freelance</option>
-                <option>Buscando trabajo</option>
-                <button class="send-button"></button>
-                </select>
-            </div>
-
-            <div class="select-radio">
-              <p>¿Recomendarias esta página a un conocido?</p>
-              <div class="container-radius">
-                <div class="input-radio">
-                  <label>Definitivamente Sí</label>
-                  <input type="radio" name="radio-conocido" value="1">
+          <div class="container-image">
+            <section class="container__section">
+                <div class="heading">
+                  <h1 class="heading__titulo">Formulario de contacto</h1>
+                  <h5 class="heading__subtitulo">
+                    Gracias por tomarte el tiempo para contactar
+                    con nosotros y ayudarnos a mejorar
+                  </h5>
                 </div>
-                <div class="input-radio">
-                  <label>Quizás</label>
-                  <input type="radio" name="radio-conocido" value="2">
-                </div>
-                <div class="input-radio">
-                  <label>No estoy seguro</label>
-                  <input type="radio" name="radio-conocido" value="3">
-                </div>
+              </section>
+      
+              <div class="container__section">
+                <form class="container-formulario" action="google.com" method="get">
+                  <div class="input-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" id="nombre" name="nombre" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="emaildir">Email</label>
+                      <input type="email" id="emaildir" placeholder="Introduce tu email" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="edad">Edad</label>
+                      <input type="number" id="edad" placeholder="Introduce tu edad, debes ser mayor de edad" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="rol">¿Qué rol describe mejor tu situación actual?</label>
+                      <select name="rol" required>
+                      <option>Selecciona tu rol actual</option>
+                      <option>Estudiante</option>
+                      <option>Trabajo a tiempo completo</option>
+                      <option>Freelance</option>
+                      <option>Buscando trabajo</option>
+                      <button class="send-button"></button>
+                      </select>
+                  </div>
+      
+                  <div class="select-radio">
+                    <p>¿Recomendarias esta página a un conocido?</p>
+                    <div class="container-radius">
+                      <div class="input-radio">
+                        <label>Definitivamente Sí</label>
+                        <input type="radio" name="radio-conocido" value="1">
+                      </div>
+                      <div class="input-radio">
+                        <label>Quizás</label>
+                        <input type="radio" name="radio-conocido" value="2">
+                      </div>
+                      <div class="input-radio">
+                        <label>No estoy seguro</label>
+                        <input type="radio" name="radio-conocido" value="3">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="select-check">
+                    <p>¿Qué recomendaciones de gustaría recibir? (Marca todas las que apliquen)</p>
+                    <div class="select-check__container">
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Proyectos Front-end</label>
+                      </div>
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Proyectos Back-end</label>
+                      </div>
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Social media (Marketing)</label>
+                      </div>
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Desarrolo de Videojuegos</label>
+                      </div>
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Tutoriales de UX/UI</label>
+                      </div>
+                      <div class="container-check">
+                        <input type="checkbox">
+                        <label>Otros</label>
+                      </div>
+                    </div>              
+                  </div>
+                  
+                  <div class="select-date">
+                      <div class="select-date__container">
+                          <p>¿Cuando preferirías que te contactésemos?</p>
+                          <input type="datetime-local" value="dd/mm/aaaa --:--" min="2022-01-01T00:00">
+                      </div>
+                  </div>
+                  
+                  <div class="select-text-area">
+                      <p>¿Otros comentarios o sugerencias?</p>
+                    <textarea class="text-area" placeholder="Introduzca sus comentarios..."></textarea>
+                  </div>
+                  
+                  <div class="select-submit">
+                      <input type="submit">
+                  </div>
+                </form>
               </div>
-            </div>
-            
-            <div class="select-check">
-              <p>¿Qué recomendaciones de gustaría recibir? (Marca todas las que apliquen)</p>
-              <div class="select-check__container">
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Proyectos Front-end</label>
-                </div>
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Proyectos Back-end</label>
-                </div>
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Social media (Marketing)</label>
-                </div>
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Desarrolo de Videojuegos</label>
-                </div>
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Tutoriales de UX/UI</label>
-                </div>
-                <div class="container-check">
-                  <input type="checkbox">
-                  <label>Otros</label>
-                </div>
-              </div>              
-            </div>
-            
-            <div class="select-date">
-                <div class="select-date__container">
-                    <p>¿Cuando preferirías que te contactésemos?</p>
-            	    <input type="datetime-local">
-                </div>
-            </div>
-            
-            <div class="select-text-area">
-            	<p>¿Otros comentarios o sugerencias?</p>
-              <textarea class="text-area" placeholder="Introduzca sus comentarios..."></textarea>
-            </div>
-            
-            <div class="select-submit">
-            	<input type="submit">
-            </div>
-          </form>
-        </div>
-
+          </div>
       </div>
     </main>
+    <footer>
+      <div class="footer">
+        <p>Copyright © mi equipo 2022</p>
+      </div>
+    </footer>
   </body>
 </html>
