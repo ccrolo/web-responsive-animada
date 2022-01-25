@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #7b83a1;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Letra Asignada';
+    src: url(oswald-font/static/Oswald-Regular.ttf);
+}
+
+.body-container {
+    font-family: 'Letra Asignada';
+}
+
+.papa-ches-container {
+    background: url(chess-bg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chessboard-container {
+    /* width: 530px;
+    height: 530px; */
+    width: 480px;
+    height: 480px;
+    @media (min-width: 1024px) {}
+}
+
+.solo-label {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+    .solo-label {
+        margin-left: -20px;
+    }
+}
+
+.flip {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 30px solid #333333;
+    transition: 1s ease-out;
+    background-color: #ffffff;
+    /* overflow: hidden; */
+}
+
+.flip div {
+    text-align: center;
+    /* font-size: 40px; */
+    font-size: 30px;
+    width: 52.5px;
+    height: 45px;
+}
+
+.grey {
+    background-color: #999999;
+}
+
+#rotar:checked+.flip {
+    transform: rotateX(180deg);
+}
+
+#rotar:checked+.flip div {
+    transform: rotateX(180deg);
+}
+
+
+/* 
+@media screen and (min-width:480px) {
+    .chessboard-container {
+        width: 100%;
+    }
+}
+
+
+.flip {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    border: 30px solid #333333;
+    transition: 0.1s ease-out;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.flip div {
+width: 59px;
+height: 54px; 
+text-align: center;
+font-size: 40px;
+
+}
+.grey {
+    background-color: #999999;
+}
+#rotar:checked+.flip {
+    transform: rotateX(180deg);
+}
+#rotar:checked+.flip div {
+    transform: rotateX(180deg);
+}
+*/
