@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.redes.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.navegacion {
+    background-color: white;
+}
+.redes-sociales {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: #eee;
+}
+.redes.container ul li {
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+}
+.redes.container ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+.redes.container ul:hover a {
+    filter: blur(2px)
+}
+.redes.container ul li a:hover {
+    transform: translateY(-3px) scale(1.25);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, -4);
+    filter: none
+}
+.lista-eugenio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.enlaces {
+    margin-right: 20px;
+}
+.enlaces a {
+    text-decoration: none;
+    margin-right: 30px;
+    padding: 20px;
+}
+.enlaces a:last-of-type {
+    margin-right: 0;
+}
+.enlaces a:hover {
+    background-color: #1B1C20;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.logotipo {
+    margin-left: 20px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #7b83a1;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Letra Asignada';
+    src: url(oswald-font/static/Oswald-Regular.ttf);
+}
+
+.body-container {
+    font-family: 'Letra Asignada';
+}
+
+.papa-ches-container {
+    background: url(chess-bg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chessboard-container {
+    /* width: 530px;
+    height: 530px; */
+    width: 480px;
+    height: 480px;
+    @media (min-width: 1024px) {}
+}
+
+.solo-label {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+    .solo-label {
+        margin-left: -20px;
+    }
+}
+
+.flip {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 30px solid #333333;
+    transition: 1s ease-out;
+    background-color: #ffffff;
+    /* overflow: hidden; */
+}
+
+.flip div {
+    text-align: center;
+    /* font-size: 40px; */
+    font-size: 30px;
+    width: 52.5px;
+    height: 45px;
+}
+
+.grey {
+    background-color: #999999;
+}
+
+#rotar:checked+.flip {
+    transform: rotateX(180deg);
+}
+
+#rotar:checked+.flip div {
+    transform: rotateX(180deg);
+}
+
+
